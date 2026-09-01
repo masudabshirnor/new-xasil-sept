@@ -333,7 +333,7 @@ export default function App() {
             lat: Number(newLat),
             lng: Number(newLng),
             amenities: amenitiesArray.length > 0 ? amenitiesArray : p.amenities,
-            rooms: newRooms.map((r: any, idx) => ({ ...r, id: r.id || nr-${Date.now()}-${idx} }))
+            rooms: newRooms.map((r: any, idx: number) => ({ ...r, id: r.id || nr-${Date.now()}-${idx} })),
           };
         }
         return p;
